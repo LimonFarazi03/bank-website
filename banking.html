@@ -22,34 +22,36 @@
             <div class="grid grid-cols-3 gap-4">
                 <div class="bg-blue-400 px-4 py-8 rounded-md text-white">
                     <h1 class="text-3xl mb-2">Diposit</h1>
-                    <h3 class=" text-5xl font-bold">$00</h3>
+                    <h3 class=" text-5xl font-bold">$<span id="deposit-total">00</span></h3>
                 </div>
                 <div class="bg-pink-400 px-4 py-8 rounded-md text-white">
-                    <h1 class="text-3xl mb-2">Withdraw</h1>
-                    <h3 class=" text-5xl font-bold">$00</h3>
+                    <h1 class="text-3xl mb-2 ">Withdraw</h1>
+                    <h3 id="withdraw-total" class=" text-5xl font-bold">$00</h3>
                 </div>
-                <div class="bg-emerald-700 px-4 py-8 rounded-md text-white">
+                <div class="bg-emerald-700 px-4 py-8 rounded-md text-white ">
                     <h1 class="text-3xl mb-2">Balance</h1>
-                    <h3 class=" text-5xl font-bold">$00</h3>
+                    <h3 id="balance-total" class=" text-5xl font-bold ">$680</h3>
                 </div>
             </div>
         </section>
         <!-- Diposit And Withdraw -->
-        <section class="mt-12">
+        <section class="mt-12 ">
             <div class="grid grid-cols-2 gap-8">
-                <div class="bg-red-100 p-5 rounded-md">
-                    <h3 class=" text-3xl my-6 ">Please <span class="text-yellow-500 uppercase font-bold ">Depoit</span></h3>
-                    <input id="deposit-input" class="border-2 border-gray-400 outline-none block w-3/4 px-2 p-1 rounded-md my-5 " type="text " placeholder="Depoit Your Amount ">
+                <div class="bg-red-100 p-5 rounded-md ">
+                    <h3 class=" text-3xl my-6">Please <span class="text-yellow-500 uppercase font-bold ">Depoit</span>
+                    </h3>
+                    <input id="deposit-input" class="border-2 border-gray-400 outline-none block w-3/4 px-2 p-1 rounded-md my-5 " type="text" placeholder="Depoit Your Amount ">
                     <Button id="deposit-btn" class="bg-cyan-600 py-2 px-4 rounded-md text-white text-lg font-bold ">Deposit</Button>
                 </div>
-                <div class="bg-green-200 p-5 rounded-md">
-                    <h3 class=" text-3xl my-6 ">Please <span class="text-emerald-700 uppercase font-bold">Withdraw</span></h3>
-                    <input id="withdraw-input" class="border-2 border-gray-400 outline-none block w-3/4 px-2 p-1 rounded-md my-5 " type="text " placeholder=" Withdraw Your Amount ">
-                    <Button id="withdraw-btn" class="bg-cyan-600 py-2 px-4 rounded-md text-white text-lg font-bold ">Withdraw</Button>
+                <div class="bg-green-200 p-5 rounded-md ">
+                    <h3 class=" text-3xl my-6">Please <span class="text-emerald-700 uppercase font-bold ">Withdraw</ span></h3>
+                    <input id="withdraw-input" class="border-2 border-gray-400 outline-none block w-3/4 px-2 p-1 rounded-md my-5" type="text" placeholder="Withdraw Your Amount">
+                    <Button id="withdraw-btn" class="bg-cyan-600 py-2 px-4 rounded-md text-white text-lg font-bold">Withdraw</Button>
                 </div>
             </div>
         </section>
     </main>
+    <script src="js/banking.js "></script>
 </body>
 
 </html>
