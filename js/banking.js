@@ -1,13 +1,25 @@
-document.getElementById('deposit-btn').addEventListener('click', function() {
-    // get the amount deoposited
-    let depositInput = document.getElementById('deposit-input');
-    let depositAmount = depositInput.value;
-    // console.log(depositAmount);
-    // next
-    const depositTotal = document.getElementById('deposit-total');
-    depositTotal.innerText = depositAmount;
+function deposit() {
+    let depositValue = document.getElementById('deposit-value');
+    let depositOutput = document.getElementById('deposit-output');
+    let balanceOutput = document.getElementById('balance-output');
 
-    // clear the deopsit input
-    depositInput.value = '';
-    alert('SuccessFully Deposit your money')
-})
+    depositOutput.innerText =
+        parseFloat(depositOutput.innerText) + parseFloat(depositValue.value);
+    balanceOutput.innerText =
+        parseFloat(balanceOutput.innerText) + parseFloat(depositValue.value);
+    // Clening
+    depositValue.value = '';
+}
+
+function withdraw() {
+    let withDrawValue = document.getElementById('withdraw-value');
+    let withDrawOutput = document.getElementById('withdraw-output');
+    let balanceOutput = document.getElementById('balance-output');
+
+    withDrawOutput.innerHTML =
+        parseFloat(withDrawOutput.innerHTML) + parseFloat(withDrawValue.value);
+    balanceOutput.innerText =
+        parseFloat(balanceOutput.innerText) - parseFloat(withDrawValue.value);
+    // Clening
+    withDrawValue.value = '';
+}
